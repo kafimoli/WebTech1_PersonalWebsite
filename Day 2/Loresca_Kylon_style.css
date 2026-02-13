@@ -1,0 +1,31 @@
+body {
+    margin: 0 20%;
+    font: 1.25rem/1.75rem sans-serif;
+    color: #1f2132;
+    background-color: #c6d1e2;
+}
+
+header{
+    text-align: center;
+    padding: 12px;
+    margin-bottom: 14px;
+}
+h1{
+    font : italic bold 2.5rem Futura, sans-serif; color: #dc2f7e
+}
+h2{
+    text-align: center;
+    color: #aa4d76;
+    font: bold 1.25rem, sans-serif;
+}
+h3{
+    font: bold Verdana sans-serif;
+}
+p{
+    margin: 5% 10%;
+}
+
+
+
+small { color: gray}
+img {width: 100%; height: auto;}
