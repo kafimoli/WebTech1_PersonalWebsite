@@ -1,144 +1,181 @@
-
-
-body{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    position:relative;
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: relative;
     margin: 0 10%;
     background-color: #c8c8ff;
+    min-height: 100vh;
 }
-body::before{
+
+body::before {
     content: "";
     position: fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-image: url('images/silvermoonhall.png');
-    background-size:cover;
-    background-position:center;
-    filter:blur(5px);
-    z-index:-1;
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px);
+    z-index: -1;
     transform: scale(1.1);
 }
 
-h1{
-    text-align:center;
-    
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+h1 {
+    text-align: center;
+    font-size: clamp(24px, 6vw, 32px);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
-.header{
+.header {
     text-align: right;
     border: 2px solid black;
     border-radius: 10px;
     padding: 10px 10px;
     padding-bottom: 20px;
     background-color: white;
-    font-size:clamp(16px, 1.15vw, 36px);       
+
 }
 
-.header a{
-    text-decoration:none;
+.header a {
+    text-decoration: none;
     margin: 0% 15px;
     color: black;
-    font-size:clamp(16px, 1.3vw, 36px);
-    font-family:cursive;
+    font-size: clamp(16px, 1.3vw, 36px);
+    font-family: cursive;
     padding: 1% 2%;
     transition: background-color 0.3s, color 0.3s;
     border-radius: 15px;
+
+    -webkit-tap-highlight-color: transparent;
 }
 
-.header a:hover{
+.header a:active,
+.header a:hover {
     background-color: black;
     color: white;
-    
-    
-}
-.container{
-    float:left;
-    max-width:300px;
-    margin-right:20px;
-    margin-bottom:10px;
-    height:auto;
 }
 
-.home{
-    background-color:#8a99ec;
+.container {
+    display: block;
+    margin: 0 auto 21px auto;
+    width: 100%;
+    max-width: 300px;
+    object-fit: cover;
+}
+
+@media(min-width: 924px) {
+    .container {
+        float: left;
+        margin-right: 20px;
+        margin-bottom: 10px;
+        margin-left: 0;
+    }
+}
+
+.homecontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home {
+    background-color: #8a99ec;
+    width: 60%;
+    max-width: 90%;
     padding: 15px 30px;
-    margin: 50px 15vw;
+    margin-top: 25px;
     border-radius: 40px;
-    font-size:clamp(16px, 1.5vw, 36px);
-    margin-bottom:100px;
-    float:left;
+    font-size: clamp(16px, 1.5vw, 36px);
+    
+    float: left;
 }
 
 
-.content{
-    background-color:#8a99ec;
+.content {
+    background-color: #8a99ec;
     padding: 1px 5%;
-    padding-bottom:3%;
+    padding-bottom: 3%;
     margin: 50px 0;
     border-radius: 20px;
-    font-size:clamp(16px, 1.5vw, 36px);
-    margin-bottom:100px;
+    font-size: clamp(16px, 1.5vw, 36px);
+    
 }
 
 table {
-    border-collapse:collapse;
-    width: 80vh;
+    border-collapse: collapse;
+    width: 80%;
     background-color: #cdd6ff;
-    margin-left:auto;
-    margin-right:auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-th, td {
+th,
+td {
     border: 3px solid #333333;
     padding: 8px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-caption{
+
+caption {
     font-weight: bold;
     margin-top: 20px;
     margin-bottom: 5px;
 }
+
 th {
     background-color: #5d60ff;
     font-weight: bold;
     color: white
 }
-td a{
-    text-decoration:none;
-    font-weight:bold;
+
+td a {
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.gallery{
-    max-width:55vh;
-    height:auto;
+.gallery {
+    max-width: 55vh;
+    height: auto;
     border: 1px solid black;
 }
-nav{
+
+nav {
+
     color: #0066cc;
     bottom: 0;
 }
-nav a{
-    text-decoration: none;  
+
+nav a {
+    text-decoration: none;
     font-weight: bold;
     margin: 10px 10px;
 }
 
-a:hover{
+a:hover {
     color: rgb(117, 0, 226);
 }
-
-footer{
-    margin-top:10px;
+.content-wrapper{
+    flex: 1;
+}
+footer {
+    font-size: clamp(16px, 1.3vw, 36px);
+    margin-top: 10px;
     background-color: rgb(175, 175, 255);
     padding: 10px 10px;
-    position:fixed;
-    bottom: 0;
-    left: 0;
     width: 100%;
+
 }
 
-
-
+@media(min-width: 1024px) {
+    footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+    }
+    body{
+        padding-bottom:100px;
+    }
+}
