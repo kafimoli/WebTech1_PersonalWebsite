@@ -25,7 +25,7 @@ body::before {
 
 h1 {
     text-align: center;
-    font-size: clamp(24px, 6vw, 32px);
+    
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
@@ -37,6 +37,10 @@ h1 {
     padding-bottom: 20px;
     background-color: white;
 
+}
+
+.header h1{
+    font-size: clamp(24px, 6vw, 32px);
 }
 
 .header a {
@@ -62,7 +66,7 @@ h1 {
     display: block;
     margin: 0 auto 21px auto;
     width: 100%;
-    max-width: 300px;
+    max-width: 250px;
     object-fit: cover;
 }
 
@@ -89,8 +93,6 @@ h1 {
     margin-top: 25px;
     border-radius: 40px;
     font-size: clamp(16px, 1.5vw, 36px);
-    
-    float: left;
 }
 
 
@@ -106,7 +108,7 @@ h1 {
 
 table {
     border-collapse: collapse;
-    width: 80%;
+    max-width: 80%;
     background-color: #cdd6ff;
     margin-left: auto;
     margin-right: auto;
@@ -137,7 +139,7 @@ td a {
 }
 
 .gallery {
-    max-width: 55vh;
+    max-width: 100%;
     height: auto;
     border: 1px solid black;
 }
