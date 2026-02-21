@@ -60,7 +60,7 @@ h1 {
     border:none;
     cursor:pointer;
 }
-.header a {
+.nav-links a {
     text-decoration: none;
     margin: 0% 15px;
     color: black;
@@ -72,8 +72,21 @@ h1 {
     -webkit-tap-highlight-color: transparent;
    
 }
-.nav-links li{
-    margin: 0% 15px;
+
+
+@media (min-width:768px){
+    .nav-links li{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        height:1.1em;
+        padding: 0 15px;
+        width:100%;
+        border-left: 2px solid black;
+    }
+    .nav-links li:first-child{
+        border-left: none;
+    }
 }
 
 .header a:active{
@@ -100,9 +113,7 @@ h1 {
         flex-direction: row;
         justify-content: space-between;
     }
-    .header a{
-        padding: 2% 5%;
-    }
+    
     .nav-links{
         margin:0;
         
@@ -122,26 +133,52 @@ h1 {
 
         transition: transform 0.4s ease-in-out;
         
-        padding-top: 90px;
+        padding-top: 120px;
         text-align: right;
         box-shadow: -5px 0 10px rgba(0,0,0,0.1);
         z-index: 1000;
+
+        align-items: stretch;
+        padding-right:0;
+        padding-left:0;
     }
 
     .nav-links a{
+        margin: 0;
         color:white;
-        -webkit-text-stroke: black 1px;
+        display:flex;
+        width:100%;
+        align-items: center;
+        justify-content: flex-end;
+        box-sizing: border-box;
+
+        padding: 15px 25px 15px 0;
+        
+        text-align: right;
+        border-bottom:1px solid gray;
+        border-top: 1px solid gray;
+        border-radius: 0;
     }
     .nav-links.active{
         transform:translateX(0);
     }
 
     .nav-links li{
-        margin: 15px 0;
+        margin: 0;
+        width: 100%;
     }
     .header a:active {
         background-color: white;
         color: black;
+    }
+    @media (hover: hover) {
+        .header a{
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .header a:hover {
+            background-color: white;
+            color: black
+        }
     }
 }
 
