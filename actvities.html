@@ -9,38 +9,46 @@
 </head>
 
 <header>
-    <div class="header">
-        <h1>Kylon's Personal Website</h1>
-        <a href="index.html">Home</a>|
-        <a href="about.html">About me</a>|
-        <a href="actvities.html">Activities</a>|
-        <a href="gallery.html">Gallery</a>|
-        <a href="contact.html">Contacts</a>
-        <div>
+
+	<nav class="header">
+		<h1>Kylon's Personal Website</h1>
+		<button class="menu-toggle" id="mobile-menu">
+			☰
+		</button>
+		<ul class = "nav-links">
+		<li><a href="index.html">Home</a>|</li>
+		<li><a href="about.html">About me</a>|</li>
+		<li><a href="actvities.html">Activities</a>|</li>
+		<li><a href="gallery.html">Gallery</a>|</li>
+		<li><a href="contact.html">Contacts</a></li>
+		</ul>
+	</nav>
 </header>
 
 <body>
     <div class="content">
 
         <h1>Activities</h1>
-        <table>
-            <tr>
-                <th colspan="2">Week 2</th>
-            </tr>
-            <tr>
-                <td rowspan="2"><strong>Day 1</strong></td>
-                <td><a href="Day 1/index.html" target="_blank">Jen's Kitchen with css</a></td>
-            </tr>
-            <tr>
-                <td><a href="Day 1/index without css.html" target="_blank">Jen's Kitchen without css</td>
-            </tr>
-            <tr>
-                <td><strong>Day 2</strong></td>
-                <td><a href="Day 2/index.html" target="_blank">Black Goose Bistro</a></td>
-            </tr>
-        </table>
+        <div class="table-container">
+            <table>
+                <tr>
+                    <th colspan="2">Week 2</th>
+                </tr>
+                <tr>
+                    <td rowspan="2"><strong>Day 1</strong></td>
+                    <td><a href="Day 1/index.html" target="_blank">Jen's Kitchen with css</a></td>
+                </tr>
+                <tr>
+                    <td><a href="Day 1/index without css.html" target="_blank">Jen's Kitchen without css</td>
+                </tr>
+                <tr>
+                    <td><strong>Day 2</strong></td>
+                    <td><a href="Day 2/index.html" target="_blank">Black Goose Bistro</a></td>
+                </tr>
+            </table>
+        </div>
     </div>
-    <div class = "content-wrapper"></div>
+    <div class="content-wrapper"></div>
     <footer>
         <strong>Navigation</strong><br>
         <nav>
@@ -52,7 +60,8 @@
 
         <small>&#169;Copyright 2026, Kylon Loresca</small>
     </footer>
-
+    
+    <script src = "scripts/hamburger.js"></script>
 </body>
 
 </html>
