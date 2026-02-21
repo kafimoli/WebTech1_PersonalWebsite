@@ -108,6 +108,7 @@ h1 {
     .menu-toggle{
         display:block;
         z-index:1001;
+        -webkit-tap-highlight-color: transparent;
     }
     .header{
         flex-direction: row;
